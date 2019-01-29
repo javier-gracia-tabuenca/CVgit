@@ -143,7 +143,7 @@
 \pgfmathsetlength{\imagewidth}{5cm}
 \pgfmathsetlength{\imagescale}{\imagewidth/600}
 
-\newcommand{\profilesection}[2]{\vspace{8pt}{\color{black!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
+\newcommand{\profilesection}[2]{\vspace{8pt}{\color{black!80} \LARGE #1 \rule[0.15\baselineskip]{#2}{1pt}}}
 
 % Define custom commands for CV info
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
@@ -266,33 +266,43 @@
 
     %------------------------------------------------
         
-        \profilesection{Knowledge}{2cm}
+        \profilesection{Knowledge}{3cm}
 
     	\skills
         
         %------------------------------------------------
         
-        \profilesection{Programming}{1.2cm} 
+        \profilesection{Programming}{2.2cm} 
         
-		\interests{
-		{Comsol/4},
-		{LabView/4},
-		{R/4.5},
-		{C/5},
-		{Matlab/5.75}}        
-        \interests
+        \lanprog{Matlab}{+6y}{Chaos analysis, signal processing} 
+        \lanprog{R}{+2y}{Statistical analysis}       
+        \lanprog{C}{+2y}{MSP430, ESP8266, Arduino}
+        \lanprog{LabView}{+2y}{USB-6259, PID, +Matlab}
+        \lanprog{Altium}{+2y}{PCB, also Eagle}
+        \lanprog{Comsol}{+1y}{3D thorax, AC/DC, +Matlab}
+        %\lanprog{Others}{}{R,}
+        
+%		\interests{
+%		{Comsol/4},
+%		{LabView/4},
+%		{R/4.5},
+%		{C/5},
+%		{Matlab/5.75}}        
+%        \interests
+
         
 
-        \profilesection{Languages}{2.2cm} 
+        \profilesection{Languages}{3cm} 
               
        \includegraphics[width=1.2cm]{img/esp.png}~
         \includegraphics[width=1.4cm]{img/eng.png}~
        \includegraphics[width=1.2cm]{img/cat.png}~
         \includegraphics[width=1.2cm]{img/fin.png}
         
-         \profilesection{Interests}{3cm} 
-~\\~         
+         \profilesection{Interests}{3.6cm}   
+        \begin{center}   
          \includegraphics[width=4.5cm]{img/test.png}
+        \end{center}
 %        
 %        \profilesection{References}{2.4cm}\\
 %
@@ -419,6 +429,13 @@
 	}\\
 }
 
+%----------------------------------------------------------------------------------------
+%	 Programing
+%----------------------------------------------------------------------------------------
+\newcommand{\lanprog}[3]{%
+	{\color{mainblue} \textbf{\large #1} \hfill #2}\\
+ 	{ \small \phantom{0} \hfill #3}\\ 
+}
 %----------------------------------------------------------------------------------------
 %	 MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
