@@ -274,7 +274,7 @@
         
         \profilesection{Programming}{2.2cm} 
         
-        \lanprog{Matlab}{+6y}{Chaos analysis, signal processing} 
+        \lanprog{Matlab}{+6y}{Signal processing, chaos analysis} 
         \lanprog{R}{+2y}{Statistical analysis}       
         \lanprog{C}{+2y}{MSP430, ESP8266, Arduino}
         \lanprog{LabView}{+2y}{USB-6259, PID, +Matlab}

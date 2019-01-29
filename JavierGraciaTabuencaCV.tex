@@ -24,7 +24,9 @@
 %bibliogrphy
 \usepackage[utf8]{inputenc}
 \usepackage{doi}
-\usepackage[style=numeric,sorting=ydnt,maxbibnames=9,backend=biber,doi=false,isbn=false,date=year,block=space]{biblatex}
+\usepackage[style=numeric,sorting=ydnt,maxbibnames=9,backend=biber,doi=false,
+isbn=false,date=year,block=space]{biblatex}
+\setlength\bibitemsep{0.2cm}
 %\usepackage[style=bwl-FU,maxbibnames=100,maxcitenames=1,backend=biber,doi=false,isbn=false,url=false,date=year,block=space]{biblatex}
 \addbibresource{references.bib}
 
@@ -289,7 +291,6 @@
 \nocite{*}
 
 \printbibliography[heading=none,title={}]
-
 
 \begin{flushright}
 \textit{* unpublished}
