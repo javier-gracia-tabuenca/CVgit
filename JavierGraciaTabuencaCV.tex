@@ -1,0 +1,290 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.0 (14/7/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+%bibliogrphy
+\usepackage[utf8]{inputenc}
+\usepackage{doi}
+\usepackage[style=numeric,sorting=ydnt,maxbibnames=9,backend=biber,doi=false,isbn=false,date=year,block=space]{biblatex}
+%\usepackage[style=bwl-FU,maxbibnames=100,maxcitenames=1,backend=biber,doi=false,isbn=false,url=false,date=year,block=space]{biblatex}
+\addbibresource{references.bib}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\cvname{Javier Gracia} % Your name
+\cvjobtitle{Biomedical R\&D \\ HW and signal-processing } % Job title/career
+
+\cvsiteln{gumair86}
+\cvnumberphone{+358 469 086 981} % Phone number
+\cvsite{profile/Javier_Gracia2} % Personal website
+\cvmail{javier.gracia.tabuenca@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+
+\begin{document}
+
+\makeprofile % Print the sidebar
+
+
+%----------------------------------------------------------------------------------------
+%	 Proyects 
+%----------------------------------------------------------------------------------------
+
+\section{Projects}
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+    	{2017 - Pre.}
+        {Asthma detection from nocturnal tidal breathing in children~\cite{children,infants}}
+        {\\Collab.: Helsinki university hospital, Tampere university hospital }
+        {\normalsize Algorithms defining sleep phase, algorithms measuring breath-to-breath parameters, signal processing, statistical analysis, hardware testing, manuscript writing.}
+        {}
+
+	\twentyitem
+    	{2016 - 2017}
+        {Nonlinear local projection filter for impedance pneumography~\cite{nlpf}}
+        {\\Collab.: Tampere university hospital }
+        {\normalsize Noise reduction filter from the field of deterministic chaos with great potential in quasi-periodic biosignals, manuscript writing.}
+        {}  
+  
+  \twentyitem
+    	{2013 - 2016}
+        {Combined impulse oscillometry-impedance pneumography~\cite{iosj,multi}}
+        {}
+        {\normalsize Hardware designing, building, and calibration. Signal processing. Design test in healthy volunteers;  manuscript writing.}
+        {     }     
+        
+\end{twenty} 
+
+
+%----------------------------------------------------------------------------------------
+%	 WORK
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}        
+\begin{twenty}
+	\twentyitem
+    	{2018}
+        {Scientific Advisor}
+        {\href{https://www.ventica.net/}{\textbf{Ventica®}}}
+        {}%{Tampere, Finland}
+        {Consultancy for Ventica algorithm development.}
+        
+	\twentyitem
+    	{2013 - Pre.}
+        {Lecturer}
+        {\href{https://www.tut.fi/}{\textbf{Tampere University of Technology}}}
+        {}%{Tampere, Finland}
+        {Lecture and assist students on various medical HW/SW projects.  
+        \\ Main responsible of 
+\href{https://www.youtube.com/watch?time_continue=1&v=E3D8rAG6S4Q}{“Basics of Medical Electronics” }.
+        %\\   \href{https://eacea.ec.europa.eu/sites/2007-2013/tempus-programme_en}{TEMPUS} program: U. of Montenegro, U. of Belgrade. 
+        }
+
+	\twentyitem
+    	{2012 - 2013}
+        {Researcher}
+        {\href{https://www.tut.fi/}{\textbf{Tampere University of Technology}}}
+         {}%{Tampere, Finland}
+        {Testing wearable's firmware, now knows as \href{https://www.ventica.net/}{Ventica®}.   }
+
+	\twentyitem
+    	{2011 - 2012}
+        {Researcher}
+        {\href{https://http://www.fcirce.es//}{\textbf{Fundaci\'on CIRCE}}}
+        {}%{Zaragoza, Spain}
+        {Java programmer optimization algorithms.}
+\end{twenty}
+
+
+
+%\begin{twenty}
+%	\twentyitem
+%    	{2009 - 2011}
+%        {Researcher}
+%        {\href{https://www.tut.fi/}{\textbf{Cafe en Seine}}}
+%        {Dublin, Ireland}
+%        {Tasks: Barista  }
+%\end{twenty}
+
+
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+%\section{Summary}
+%Hands-on experience on a wide spectrum of the R\&D cycle of medical devices. Ranging from hardware design to patient testing, including advance signal processing and statistical analysis. 
+%Willing to continue adding colors to this spectrum.
+
+\section{Education}
+
+% \newcommand*{\Skype} {Skype:\href{skype:gumair86?add} {link}} 
+% \newcommand {\sender} [1] [\normalsize] {\skype} 
+
+%\sender 
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+    	{2013 - 2019 \\ (Expected)}
+        {PhD. Biomedical Engineering}
+        {\href{https://www.tut.fi/}{\textbf{Tampere University of Technology}}}
+        {}%{Tampere, Finland}
+        {Specialization: Novel hardware and signal processing for paediatric lung function testing based on impedance pneumography.}
+	\twentyitem
+    	{2005 - 2009}
+        {MSc. Electronics Engineering}
+        {\href{https://www.upc.cat}{\textbf{Universitat Politecnica de Catalunya}}}
+        {}%{Barcelona, Spain}        
+        {Master's thesis at: Tampere University of Technology (2008-2009). \\
+        Awards: 3rd best grade of the 15th graduation year.}
+     \twentyitem
+    	{2000 - 2005}
+        {BEng. Computer Sciences }
+        {\href{http://www.unizar.es/}{\textbf{Universidad de Zaragoza } }}
+        {}%{La Almunia, Spain}        
+        {Awards: Best bachelor's thesis 2004/2005, Awarded by \href{http://www.aitia.org/}{AITIA}.}
+	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+\end{twenty}
+
+
+%----------------------------------------------------------------------------------------
+%	 Conferences
+%----------------------------------------------------------------------------------------
+
+\section{Conferences }
+
+\begin{twenty} % Environment for a list with descriptions
+
+	\twentyitem
+    	{Jun 2018}
+        {IUPESM2018, World congress biomedical engineering}
+        {}
+        {Prague, Czech Republic \hfill
+          { \ \href{https://www.slideshare.net/slideshow/embed_code/key/z0l5pXuzNVj5EG}{Oral presentation}}
+        }
+        {}
+        
+
+	\twentyitem
+    	{Jun 2017}
+        {EMBEC17, European medical engineering conference~\cite{nlpf}}
+        {}
+        {Tampere, Finland   \hfill 
+        	\href{https://www.slideshare.net/slideshow/embed_code/key/34qLaFcP2gR6ji}{Oral presentation}
+        }
+        {}
+       
+
+	\twentyitem
+    	{Feb 2015}
+        {ICBEM, International conference on bioelectromagnetism~\cite{iosc}}
+        {}
+        {Tallin, Estonia \hfill
+			\href{https://www.slideshare.net/slideshow/embed_code/key/bRO5NrltJZFizD}{Oral presentation}        
+        }
+        {}
+       
+
+	\twentyitem
+    	{Sep 2013}
+        {ERS congress 2013, European respiratory society~\cite{iosers}}
+        {}
+        {Barcelona (Spain) \hfill
+			\href{http://www.ers-education.org/Media/Media.aspx?idMedia=228641}{Poster presentation}        
+        }
+        {}
+        
+\end{twenty}    
+
+      
+        
+
+
+
+%----------------------------------------------------------------------------------------
+%	 Future Interests
+%----------------------------------------------------------------------------------------
+
+%\section{Future Interests}
+%{
+%        {\begin{itemize}
+%        \item In-depth understanding of electrode processes (SEI formation) involved in existing and future generation electrode materials using state of the art characterization technique.
+%    \end{itemize}}
+%        }
+%\section{Publications}
+%{
+%        {\begin{itemize}
+%        \item For manuscripts go to the next page 
+%        %or \href{https://scholar.google.it/citations?hl=en&user=COCauOMAAAAJ&view_op=list_works&sortby=pubdate}{\textbf{Click here for Google scholar}}\\     
+%    \end{itemize}}
+%        }
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	 Foot
+%----------------------------------------------------------------------------------------
+\begin{flushright}
+\textbf{\textit{For publications [$\cdot$] consult the next page}}
+\\
+\textbf{\textit{For interactive links consult the PDF version}}
+\end{flushright}
+% \clearpage
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	 bibliography 
+%----------------------------------------------------------------------------------------
+\newpage
+
+
+
+
+
+
+\newgeometry{margin=3cm}
+
+\section{Publications}
+
+\nocite{*}
+
+\printbibliography[heading=none,title={}]
+
+
+\begin{flushright}
+\textit{* unpublished}
+\end{flushright}
+
+\end{document} 
