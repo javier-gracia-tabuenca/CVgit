@@ -280,7 +280,7 @@
         \lanprog{LabView}{+2y}{USB-6259, PID, +Matlab}
         \lanprog{Altium}{+2y}{PCB, also Eagle}
         \lanprog{Comsol}{+1y}{3D thorax, AC/DC, +Matlab}
-        %\lanprog{Others}{}{R,}
+        %\lanprog{git,}{}{}
         
 %		\interests{
 %		{Comsol/4},
@@ -434,7 +434,7 @@
 %----------------------------------------------------------------------------------------
 \newcommand{\lanprog}[3]{%
 	{\color{mainblue} \textbf{\large #1} \hfill #2}\\
- 	{ \small \phantom{0} \hfill #3}\\ 
+ 	\ifblank{#3}{}{ \small \phantom{0} \hfill #3}\\ 
 }
 %----------------------------------------------------------------------------------------
 %	 MARGINS AND LINKS
