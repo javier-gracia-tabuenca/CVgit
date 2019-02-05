@@ -35,13 +35,12 @@ isbn=false,date=year,block=space]{biblatex}
 %----------------------------------------------------------------------------------------
 
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+\cvname{Javier Gracia-Tabuenca} % Your name
+\cvjobtitle{~\\Biomedical R\&D \\ HW and signal-processing } % Job title/career
 
-\cvname{Javier Gracia} % Your name
-\cvjobtitle{Biomedical R\&D \\ HW and signal-processing } % Job title/career
-
-\cvsiteln{gumair86}
+\cvsiteLN{javier-gracia-tabuenca-7b411029}
 \cvnumberphone{+358 469 086 981} % Phone number
-\cvsite{profile/Javier_Gracia2} % Personal website
+\cvsiteRG{Javier\_Gracia2} % Personal website
 \cvmail{javier.gracia.tabuenca@gmail.com} % Email address
 
 %----------------------------------------------------------------------------------------
@@ -52,6 +51,17 @@ isbn=false,date=year,block=space]{biblatex}
 
 \makeprofile % Print the sidebar
 
+%----------------------------------------------------------------------------------------
+%	 BIO
+%----------------------------------------------------------------------------------------
+\vspace{\parsep}
+\vspace{\parsep}
+\vspace{\parsep}
+\vspace{\parsep}
+\vspace{\parsep}
+\section{Profile}  
+Spanish electrical engineer     Hands-on experience on a wide spectrum of the R\&D cycle of medical devices. Ranging from hardware design to patient testing, including advance signal processing methods and statistical analysis. 
+\\
 
 
 %----------------------------------------------------------------------------------------
@@ -60,44 +70,48 @@ isbn=false,date=year,block=space]{biblatex}
 
 \section{Work Experience}        
 \begin{twenty}
-	\twentyitem
+	\twentyitemlist
     	{2018}
         {Scientific Advisor}
-        {\href{https://www.ventica.net/}{\textbf{Ventica®}}}
-        {}%{Tampere, Finland}
-        {Consultancy for Ventica algorithm development.}
-
-	\twentyitem
-    	{2013 - Pre.}
+        {\href{https://www.ventica.net/}{\textbf{Ventica®}}} 
+        {
+          \item Consultancy algorithm development.
+        }
+        
+	\twentyitemlist
+    	{2013 - 2019}
         {Researcher PhD.}
         {\href{https://www.tut.fi/}{\textbf{Tampere University of Technology}}}
-        {}%{Tampere, Finland}
-        {Signal-processing \& HW design. See projects section below.} 
+        {
+          \item Signal-processing \& HW design.
+          \item See projects section below.
+        }
         
-	\twentyitem
-    	{2013 - Pre.}
+	\twentyitemlist
+    	{2013 - 2019}
         {Lecturer}
         {\href{https://www.tut.fi/}{\textbf{Tampere University of Technology}}}
-        {}%{Tampere, Finland}
-        {Lecture and assist students on various medical HW/SW projects.  
-        \\ Main responsible of 
+        {
+        \item Lecture and assist students on various medical HW/SW projects.  
+        \item Main responsible of 
 \href{https://www.youtube.com/watch?time_continue=1&v=E3D8rAG6S4Q}{“Basics of Medical Electronics” }.
         %\\   \href{https://eacea.ec.europa.eu/sites/2007-2013/tempus-programme_en}{TEMPUS} program: U. of Montenegro, U. of Belgrade. 
         }
 
-	\twentyitem
+	\twentyitemlist
     	{2012 - 2013}
         {Researcher}
         {\href{https://www.tut.fi/}{\textbf{Tampere University of Technology}}}
-         {}%{Tampere, Finland}
-        {Testing wearable's firmware, now knows as \href{https://www.ventica.net/}{Ventica®}.   }
+        {
+        \item Testing wearable's firmware, now knows as \href{https://www.ventica.net/}{Ventica®}.   }
 
-	\twentyitem
+	\twentyitemlist
     	{2011 - 2012}
         {Researcher}
         {\href{https://http://www.fcirce.es//}{\textbf{Fundaci\'on CIRCE}}}
-        {}%{Zaragoza, Spain}
-        {Java programmer optimization algorithms.}
+        {
+        \item Write optimization algorithms.
+        }
 \end{twenty}
 
 
@@ -107,44 +121,59 @@ isbn=false,date=year,block=space]{biblatex}
 
 \section{Projects}
 \begin{twenty} % Environment for a list with descriptions
-	\twentyitem
-    	{2017 - Pre.}
+	\twentyitemlist
+    	{2017 - 2019}
         {Asthma assessed from nocturnal tidal breathing in children~\cite{children,infants}}
-        {\\Collab.: Helsinki university hospital, Tampere university hospital }
-        {\normalsize 
+        {\\Collaboration: Helsinki university hospital, Tampere university hospital }
+        {
+        \item Respiration feature extraction.
+        \item Sleep phase detection.
+        \item Statistical analysis.
+        \item Manuscript writing.
         %Algorithms defining sleep phase, algorithms measuring breath-to-breath parameters, signal processing, statistical analysis, hardware testing, manuscript writing.
-        I designed algorithms defining sleep phases and measuring breath parameters. I carry statistical analysis to find the best parameters and sleep time to monitor asthma. I run the code in a AWS-like sys.}
-        {}
+        %I designed algorithms defining sleep phases and measuring breath parameters. I carry statistical analysis to find the best parameters and sleep time to monitor asthma. I run the code in a AWS-like sys.
+        }
+        
 
-	\twentyitem
+	\twentyitemlist
     	{2016 - 2017}
         {Nonlinear local projection filter for impedance pneumography~\cite{nlpf}}
-        {\\Collab.: Tampere university hospital }
-        {\normalsize
-		This noise reduction method, borrowed from chaos analysis, has a great potential for biosignals. I demonstrated so for respiratory flow. }
-        {}  
+        {\\Collaboration: Tampere university hospital }
+        {
+        \item Write algorithm borrowed from chaos analysis
+        \item Test method on respiratory flow.
+		%This noise reduction method, borrowed from chaos analysis, has a great potential for biosignals. I demonstrated so for respiratory flow. 
+		}
+       
   
-  \twentyitem
+  \twentyitemlist
     	{2013 - 2016}
         {Combined impulse oscillometry-impedance pneumography~\cite{iosj,multi}}
         {}
-        {\normalsize
-        I designed, building, and calibrated the electronics, mechanics, and signal processing. I designed and carried a test in healthy volunteers.}
-        {     }     
+        {
+        %I designed, building, and calibrated the electronics, mechanics, and signal processing. I designed and carried a test in healthy volunteers.
+        \item Design hardware. 
+        \item Test hardware. 
+        \item Implement signal processing
+        \item Conduct test in healthy volunteers
+        }
+       
         
 \end{twenty} 
 
 
 
-%\begin{twenty}
-%	\twentyitem
-%    	{2009 - 2011}
-%        {Researcher}
-%        {\href{https://www.tut.fi/}{\textbf{Cafe en Seine}}}
-%        {Dublin, Ireland}
-%        {Tasks: Barista  }
-%\end{twenty}
+%----------------------------------------------------------------------------------------
+%	 Foot
+%----------------------------------------------------------------------------------------
+\begin{flushright}
+\textbf{\textit{For publications [$\cdot$] consult the next page}}
+\\
+\textbf{\textit{For interactive links consult the PDF version}}
+\end{flushright}
+% \clearpage
 
+\newpage
 
 
 %----------------------------------------------------------------------------------------
@@ -154,35 +183,36 @@ isbn=false,date=year,block=space]{biblatex}
 %Hands-on experience on a wide spectrum of the R\&D cycle of medical devices. Ranging from hardware design to patient testing, including advance signal processing and statistical analysis. 
 %Willing to continue adding colors to this spectrum.
 
+
+\newgeometry{margin=2cm}
+\makeprofiledos
+\begin{textblock}{12.5}(7.5, 1)
 \section{Education}
 
-% \newcommand*{\Skype} {Skype:\href{skype:gumair86?add} {link}} 
-% \newcommand {\sender} [1] [\normalsize] {\skype} 
 
-%\sender 
-
-\begin{twenty} % Environment for a list with descriptions
-	\twentyitem
-    	{2013 - 2019 \\ (Expected)}
+\begin{twentydos} % Environment for a list with descriptions
+	\twentyitemlist
+    	{2013 - 2019}
         {PhD. Biomedical Engineering}
         {\href{https://www.tut.fi/}{\textbf{Tampere University of Technology}}}
-        {}%{Tampere, Finland}
-        {Specialization: Novel hardware and signal processing for paediatric lung function testing based on impedance pneumography.}
-	\twentyitem
+        {
+        \item Specialization: Novel hardware and signal processing for paediatric lung function testing based on impedance pneumography.}
+	\twentyitemlist
     	{2005 - 2009}
         {MSc. Electronics Engineering}
         {\href{https://www.upc.cat}{\textbf{Universitat Politecnica de Catalunya}}}
-        {}%{Barcelona, Spain}        
-        {Master's thesis at: Tampere University of Technology (2008-2009). \\
-        Awards: 3rd best grade of the 15th graduation year.}
-     \twentyitem
+        {
+        \item Master's thesis at: Tampere University of Technology.
+        \item Awards: 3rd best grade of the 15th graduation year.
+        }
+     \twentyitemlist
     	{2000 - 2005}
         {BEng. Computer Sciences }
         {\href{http://www.unizar.es/}{\textbf{Universidad de Zaragoza } }}
-        {}%{La Almunia, Spain}        
-        {Awards: Best bachelor's thesis 2004/2005, Awarded by \href{http://www.aitia.org/}{AITIA}.}
+        {
+        \item Awards: Best bachelor's thesis 2004/2005, Awarded by \href{http://www.aitia.org/}{AITIA}.}
 	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
-\end{twenty}
+\end{twentydos}
 
 
 %----------------------------------------------------------------------------------------
@@ -233,7 +263,7 @@ isbn=false,date=year,block=space]{biblatex}
         {}
         
 \end{twenty}    
-
+\end{textblock}
       
         
 
@@ -260,15 +290,7 @@ isbn=false,date=year,block=space]{biblatex}
 
 
 
-%----------------------------------------------------------------------------------------
-%	 Foot
-%----------------------------------------------------------------------------------------
-\begin{flushright}
-\textbf{\textit{For publications [$\cdot$] consult the next page}}
-\\
-\textbf{\textit{For interactive links consult the PDF version}}
-\end{flushright}
-% \clearpage
+
 
 
 
@@ -281,14 +303,13 @@ isbn=false,date=year,block=space]{biblatex}
 %----------------------------------------------------------------------------------------
 %	 bibliography 
 %----------------------------------------------------------------------------------------
-\newpage
 
 
 
 
 
 
-\newgeometry{margin=3cm}
+\begin{textblock}{18}(2, 15)
 
 \section{Publications}
 
@@ -299,5 +320,7 @@ isbn=false,date=year,block=space]{biblatex}
 \begin{flushright}
 \textit{* unpublished}
 \end{flushright}
+\end{textblock}
+
 
 \end{document} 

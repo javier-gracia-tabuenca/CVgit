@@ -43,10 +43,6 @@
 \renewcommand{\href}[2]{\orighref{#1}{#2~\faExternalLink}}
 \newcommand{\hrefO}[2]{\orighref{#1}{#2}}
 
-
-%%%% external ink 
-
-
 %%%%
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -119,13 +115,8 @@
 %----------------------------------------------------------------------------------------
 
 % \renewcommand{\bfseries}{\color{black}} % Make \textbf produce coloured text instead
-
 \pagestyle{empty} % Disable headers and footers
-
 \setlength{\parindent}{0pt} % Disable paragraph indentation
-
-
-
 % --------------------------------------------------------------------------------------
 % 	FONTS
 %-------------------------------------------------------------------------------------
@@ -151,8 +142,8 @@
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
-\newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
-\newcommand{\cvsiteln}[1]{\renewcommand{\cvsiteln}{#1}}
+\newcommand{\cvsiteRG}[1]{\renewcommand{\cvsiteRG}{#1}}
+\newcommand{\cvsiteLN}[1]{\renewcommand{\cvsiteLN}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
@@ -197,6 +188,9 @@
       \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
   \end{tikzpicture}
 
+  \begin{tikzpicture}[remember picture,overlay]
+      \node [rectangle, fill=sidecolor, anchor=north, minimum width=21cm, minimum height=2cm] (box) at (5cm,1.1cm){};
+  \end{tikzpicture}
   %------------------------------------------------
 
   \begin{textblock}{6}(0.5, 0.2)
@@ -207,6 +201,11 @@
     {\Huge\color{pblue}\cvname}
 
     %------------------------------------------------
+    \vspace{4mm}
+    \begin{center}
+    \roundpic[xshift=0cm,yshift=0cm]{5.5cm}{5.5cm}{img/pic.jpg}
+    \end{center}
+    
     
     {\Large\color{black!80}\cvjobtitle}
 
@@ -214,64 +213,29 @@
     
     \vspace{5mm}
     \renewcommand{\arraystretch}{1.6}
-    \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
-        
-%          \ifthenelse{\equal{\skypeID}{}}{}{
-%            {$
-%              \begin{array}{l}
-%              {{\href{callto:\skypeID}{\includegraphics[scale=0.05]{img/skype.png}}}}
-%              \end{array}
-%              $} 
-%            & \skypeID\\}
-%            
-%            
-% 
 
-      \ifthenelse{\equal{\href{\cvsiteln}{\cvsiteln}}{}}{}{
-            {$
-              \begin{array}{l}
-              {\hrefO{https://www.linkedin.com/in/javier-gracia-7b411029/}{\includegraphics[scale=0.095]{img/ln.png}}}
-              \end{array}
-              $}
-             & \href{www.linkedin.com/in/javier-gracia-7b411029/}{in/javier-gracia-7b411029}\\ }
-          
-            
-            
-      \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
-            {$
-              \begin{array}{l}
-              {\hrefO{https://www.researchgate.net/profile/Javier_Gracia2}{\includegraphics[scale=0.095]{img/researchgate_grey_2.png}}}
-              \end{array}
-              $}
-             & \href{https://www.researchgate.net/profile/Javier_Gracia2}{profile/Javier\_Gracia2}\\ }
-             
-             
-     \ifthenelse{\equal{\cvnumberphone}{}}{}{
-            {$
-              \begin{array}{l}
-              \includegraphics[scale=0.1]{img/tel.png}
-                   
-              \end{array}
-              $}
-            & \cvnumberphone\\}             
-             
-      \ifthenelse{\equal{\cvmail}{}}{}{
-            {$
-              \begin{array}{l}
-              {\hrefO{mailto:\cvmail}{\includegraphics[scale=0.05]{img/email.png}}}
-              \end{array}
-              $} 
-            & {\footnotesize \href{mailto:\cvmail}{\cvmail}}}
-    \end{tabular}
 
-    %------------------------------------------------
-        
+%------------------------------------------------        
+%% cv links 
+\begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
+
+	\cvlink{{\footnotesize\cvsiteLN}}{https://www.linkedin.com/in/\cvsiteLN}{img/ln.png}
+
+	\cvlink{\cvsiteRG}{https://www.researchgate.net/profile/\cvsiteRG}{img/researchgate_grey_2.png}
+
+	\cvlink{\cvnumberphone}{\cvnumberphone}{img/tel.png}
+
+	\cvlink{{\footnotesize \cvmail}}{mailto:\cvmail}{img/email.png}
+\end{tabular}
+
+%------------------------------------------------
+% Knolege        
         \profilesection{Knowledge}{3cm}
 
     	\skills
         
-        %------------------------------------------------
-        
+%------------------------------------------------
+%Programing
         \profilesection{Programming}{2.2cm} 
         
         \lanprog{Matlab}{+6y}{Signal processing, chaos analysis} 
@@ -289,8 +253,20 @@
 %		{C/5},
 %		{Matlab/5.75}}        
 %        \interests
+  \end{textblock}
+} 
 
-        
+\newcommand{\makeprofiledos}{
+  \begin{tikzpicture}[remember picture,overlay]
+      \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=15cm] (box) at (0.5cm,5cm){};
+  \end{tikzpicture}
+
+
+  %------------------------------------------------
+
+  \begin{textblock}{6}(0.5, 1)
+%------------------------------------------------
+%Languages         
 
         \profilesection{Languages}{3cm} 
               
@@ -298,51 +274,15 @@
         \includegraphics[width=1.4cm]{img/eng.png}~
        \includegraphics[width=1.2cm]{img/cat.png}~
         \includegraphics[width=1.2cm]{img/fin.png}
-        
+  
+  
+%------------------------------------------------
+%Interest      
          \profilesection{Interests}{3.6cm}   
         \begin{center}   
          \includegraphics[width=4.5cm]{img/test.png}
         \end{center}
-%        
-%        \profilesection{References}{2.4cm}\\
-%
-%               % \vspace{-5mm}
-%    \renewcommand{\arraystretch}{1.6}
-%    \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
-%      \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
-%            {$
-%              \begin{array}{l}
-%              {\href{\cvsite}{\hspace{-7pt}\includegraphics[scale=0.02]{img/name.png}}}
-%              \end{array}
-%              $} 
-%            & Remo Proietti Zaccaria\\}
-%      \ifthenelse{\equal{Remo.Proietti@iit.it}{}}{}{
-%            {$
-%              \begin{array}{l}
-%              {\href{mailto:Remo.Proietti@iit.it}{\includegraphics[scale=0.05]{img/email.png}}}
-%              \end{array}
-%              $} 
-%            & \href{mailto:Remo.Proietti@iit.it}{remo.proietti@iit.it}}
-%    \end{tabular}
-% 
-% \renewcommand{\arraystretch}{1.6}
-%    \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
-%      \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
-%            {$
-%              \begin{array}{l}
-%              {\href{\cvsite}{\hspace{-6pt}\includegraphics[scale=0.02]{img/name.png}}}
-%              \end{array}
-%              $} 
-%            & Claudio Capiglia\\}
-%      \ifthenelse{\equal{claudio@mvc.biglobe.ne.jp}{}}{}{
-%            {$
-%              \begin{array}{l}
-%              {\href{mailto:claudio@iit.it}{\includegraphics[scale=0.05]{img/email.png}}}
-%              \end{array}
-%              $} 
-%            & \href{mailto:claudio@mvc.biglobe.ne.jp}{claudio@mvc.biglobe.ne.jp}}
-%    \end{tabular}
-% 
+
 % 
   \end{textblock}
 }
@@ -351,6 +291,13 @@
 %----------------------------------------------------------------------------------------
 %	 COLOURED SECTION TITLE BOX
 %----------------------------------------------------------------------------------------
+
+\newcommand{\roundpic}[4][]{
+  \tikz\node [circle, minimum width = #2,
+    path picture = {
+      \node [#1] at (path picture bounding box.center) {
+        \includegraphics[width=#3]{#4}};
+    }] {};}
 
 % Command to create the rounded boxes around the first three letters of section titles
 \newcommand*\round[2]{%
@@ -395,18 +342,29 @@
 	\end{tabular*}
 }
 
+\newenvironment{twentydos}{%
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+}{%
+	\end{tabular*}
+}
+
 \newcommand{\twentyitem}[5]{%
 	#1&\parbox[t]{0.83\textwidth}{%
-		\textbf{#2}% 
-		\hfill%
-		{\footnotesize#3}\\%
-        \ifblank{#4}{}{\hfill {\footnotesize#4} \\}
+		\textbf{#2}		\hfill 	{\footnotesize#3}\\%
+        \ifblank{#4}{}{\hfill {\footnotesize#4} }
         \ifblank{#5}{}{#5\vspace{\parsep}}
 		%
 	}\\
 }
 
-
+\newcommand{\twentyitemlist}[4]{%
+	#1&\parbox[t]{0.83\textwidth}{%
+		\textbf{#2}		\hfill 	{\footnotesize#3}%
+		\begin{itemize}[topsep=5pt,leftmargin=15pt,itemsep=5pt]
+        #4
+        \end{itemize}\vspace{\parsep}
+	}\\
+}
 
 
 
@@ -433,9 +391,19 @@
 %	 Programing
 %----------------------------------------------------------------------------------------
 \newcommand{\lanprog}[3]{%
-	{\color{mainblue} \textbf{\large #1} \hfill #2}\\
+	{\color{mainblue} #2 \textbf{\large #1} \hfill }\\
  	\ifblank{#3}{}{ \small \phantom{0} \hfill #3}\\ 
 }
+
+\newcommand{\cvlink}[3]{ 
+            {$
+              \begin{array}{l}
+              {\hrefO{#2}{\includegraphics[width=0.6cm]{#3}}}
+              \end{array}
+              $}
+             & \href{#2}{#1}\\ }
+
+
 %----------------------------------------------------------------------------------------
 %	 MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
