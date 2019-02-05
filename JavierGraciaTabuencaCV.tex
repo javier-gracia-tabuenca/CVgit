@@ -34,40 +34,77 @@ isbn=false,date=year,block=space]{biblatex}
 %	 PERSONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
-% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
-\cvname{Javier Gracia-Tabuenca} % Your name
-\cvjobtitle{~\\Biomedical R\&D \\ HW and signal-processing } % Job title/career
+% Define custom commands for CV info
+\newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
+\newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
+\newcommand{\cvsiteRG}[1]{\renewcommand{\cvsiteRG}{#1}}
+\newcommand{\cvsiteLN}[1]{\renewcommand{\cvsiteLN}{#1}}
+
+
 
 \cvsiteLN{javier-gracia-tabuenca-7b411029}
 \cvnumberphone{+358 469 086 981} % Phone number
 \cvsiteRG{Javier\_Gracia2} % Personal website
 \cvmail{javier.gracia.tabuenca@gmail.com} % Email address
 
-%----------------------------------------------------------------------------------------
-\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
-\let\endchangemargin=\endlist
 
 \begin{document}
-
-\makeprofile % Print the sidebar
+%----------------------------------------------------------------------------------------
+%	 TITLE
+%----------------------------------------------------------------------------------------
+\makeprofileTitle{Javier Gracia-Tabuenca}
 
 %----------------------------------------------------------------------------------------
-%	 BIO
+%	 Left page 1
 %----------------------------------------------------------------------------------------
-\vspace{\parsep}
-\vspace{\parsep}
-\vspace{\parsep}
-\vspace{\parsep}
-\vspace{\parsep}
+\begin{LeftPage1} % Print the sidebar
+%
+\profilepic{img/pic.jpg}
+
+\jobtitle{~\\Biomedical R\&D \\ HW and signal-processing}
+
+\begin{tabular}{p{1cm} p{5.5cm}}
+ 
+	\cvlink{\small\cvsiteLN}
+	{https://www.linkedin.com/in/\cvsiteLN}
+	{img/ln.png}
+
+	\cvlink{\normalsize\cvsiteRG}{https://www.researchgate.net/profile/\cvsiteRG}{img/researchgate_grey_2.png}
+
+	\cvlink{\normalsize\cvnumberphone}{\cvnumberphone}{img/tel.png}
+
+	\cvlink{\small \cvmail}{mailto:\cvmail}{img/email.png}
+\end{tabular}
+
+%KNOWLEDGE
+\profilesection{Knowledge}{3cm}
+
+\skills
+
+%PROGRAMING
+\profilesection{Programming}{2.2cm} 
+        
+\lanprog{Matlab}{+6y}{Signal processing, chaos analysis} 
+\lanprog{R}{+2y}{Statistical analysis}    
+\lanprog{C}{+2y}{MSP430, ESP8266, Arduino}
+\lanprog{LabView}{+2y}{USB-6259, PID, +Matlab}
+\lanprog{Altium}{+2y}{PCB, also Eagle}
+\lanprog{Comsol}{+1y}{3D thorax, AC/DC, +Matlab}
+        %\lanprog{git,}{}{}
+
+\end{LeftPage1}
+
+%----------------------------------------------------------------------------------------
+%	 Right page 1
+%----------------------------------------------------------------------------------------
+\begin{RigthPage1}
+%----------------------------------------------------------------------------------------
+%	 Profile
 \section{Profile}  
 Spanish electrical engineer     Hands-on experience on a wide spectrum of the R\&D cycle of medical devices. Ranging from hardware design to patient testing, including advance signal processing methods and statistical analysis. 
 \\
-
-
 %----------------------------------------------------------------------------------------
 %	 WORK
-%----------------------------------------------------------------------------------------
-
 \section{Work Experience}        
 \begin{twenty}
 	\twentyitemlist
@@ -114,11 +151,8 @@ Spanish electrical engineer     Hands-on experience on a wide spectrum of the R\
         }
 \end{twenty}
 
-
 %----------------------------------------------------------------------------------------
 %	 Proyects 
-%----------------------------------------------------------------------------------------
-
 \section{Projects}
 \begin{twenty} % Environment for a list with descriptions
 	\twentyitemlist
@@ -156,41 +190,54 @@ Spanish electrical engineer     Hands-on experience on a wide spectrum of the R\
         \item Test hardware. 
         \item Implement signal processing
         \item Conduct test in healthy volunteers
-        }
-       
-        
+        }       
 \end{twenty} 
-
-
-
 %----------------------------------------------------------------------------------------
 %	 Foot
-%----------------------------------------------------------------------------------------
 \begin{flushright}
 \textbf{\textit{For publications [$\cdot$] consult the next page}}
 \\
 \textbf{\textit{For interactive links consult the PDF version}}
 \end{flushright}
 % \clearpage
+\end{RigthPage1}
+
 
 \newpage
 
 
 %----------------------------------------------------------------------------------------
-%	 EDUCATION
+%	 Left page 1
 %----------------------------------------------------------------------------------------
-%\section{Summary}
-%Hands-on experience on a wide spectrum of the R\&D cycle of medical devices. Ranging from hardware design to patient testing, including advance signal processing and statistical analysis. 
-%Willing to continue adding colors to this spectrum.
+\begin{LeftPage2} % Print the sidebar
+%Languages         
+\profilesection{Languages}{3cm} 
+              
+\includegraphics[width=1.2cm]{img/esp.png}~
+\includegraphics[width=1.4cm]{img/eng.png}~
+\includegraphics[width=1.2cm]{img/cat.png}~
+\includegraphics[width=1.2cm]{img/fin.png} 
+  
+%----------Interest-------------------------------------- 
+\vspace{1cm}     
+\profilesection{Interests}{3.6cm}   
+\begin{center}   
+   \includegraphics[width=4.5cm]{img/test.png}
+\end{center}
+
+\end{LeftPage2}
 
 
-\newgeometry{margin=2cm}
-\makeprofiledos
-\begin{textblock}{12.5}(7.5, 1)
+
+%----------------------------------------------------------------------------------------
+%	 Right page 1
+%----------------------------------------------------------------------------------------
+\begin{RigthPage2}
+%----------------------------------- EDUCATION ------------------------------------------
 \section{Education}
 
 
-\begin{twentydos} % Environment for a list with descriptions
+\begin{twenty} % Environment for a list with descriptions
 	\twentyitemlist
     	{2013 - 2019}
         {PhD. Biomedical Engineering}
@@ -212,12 +259,9 @@ Spanish electrical engineer     Hands-on experience on a wide spectrum of the R\
         {
         \item Awards: Best bachelor's thesis 2004/2005, Awarded by \href{http://www.aitia.org/}{AITIA}.}
 	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
-\end{twentydos}
+\end{twenty}
 
-
-%----------------------------------------------------------------------------------------
-%	 Conferences
-%----------------------------------------------------------------------------------------
+%-------------------------------- Conferences-----------------------------------------
 
 \section{Conferences }
 
@@ -226,90 +270,41 @@ Spanish electrical engineer     Hands-on experience on a wide spectrum of the R\
 	\twentyitem
     	{Jun 2018}
         {IUPESM2018, World congress biomedical engineering}
-        {}
-        {Prague, Czech Republic \hfill
-          { \ \href{https://www.slideshare.net/slideshow/embed_code/key/z0l5pXuzNVj5EG}{Oral presentation}}
-        }
-        {}
+        {Prague, Czech Republic}
+        {\href{https://www.slideshare.net/slideshow/embed_code/key/z0l5pXuzNVj5EG}{Oral presentation}}
         
 
 	\twentyitem
     	{Jun 2017}
         {EMBEC17, European medical engineering conference~\cite{nlpf}}
-        {}
-        {Tampere, Finland   \hfill 
-        	\href{https://www.slideshare.net/slideshow/embed_code/key/34qLaFcP2gR6ji}{Oral presentation}
-        }
-        {}
-       
+        {Tampere, Finland}
+        {\href{https://www.slideshare.net/slideshow/embed_code/key/34qLaFcP2gR6ji}{Oral presentation}}
+      
 
 	\twentyitem
     	{Feb 2015}
         {ICBEM, International conference on bioelectromagnetism~\cite{iosc}}
-        {}
-        {Tallin, Estonia \hfill
-			\href{https://www.slideshare.net/slideshow/embed_code/key/bRO5NrltJZFizD}{Oral presentation}        
-        }
-        {}
-       
+        {Tallin, Estonia}
+         {\href{https://www.slideshare.net/slideshow/embed_code/key/bRO5NrltJZFizD}{Oral presentation} }       
+               
 
 	\twentyitem
     	{Sep 2013}
         {ERS congress 2013, European respiratory society~\cite{iosers}}
-        {}
-        {Barcelona (Spain) \hfill
-			\href{http://www.ers-education.org/Media/Media.aspx?idMedia=228641}{Poster presentation}        
-        }
-        {}
+        {Barcelona (Spain)}
+        {\href{http://www.ers-education.org/Media/Media.aspx?idMedia=228641}{Poster presentation}  }      
+        
         
 \end{twenty}    
-\end{textblock}
+\end{RigthPage2}
       
         
-
-
-
-%----------------------------------------------------------------------------------------
-%	 Future Interests
-%----------------------------------------------------------------------------------------
-
-%\section{Future Interests}
-%{
-%        {\begin{itemize}
-%        \item In-depth understanding of electrode processes (SEI formation) involved in existing and future generation electrode materials using state of the art characterization technique.
-%    \end{itemize}}
-%        }
-%\section{Publications}
-%{
-%        {\begin{itemize}
-%        \item For manuscripts go to the next page 
-%        %or \href{https://scholar.google.it/citations?hl=en&user=COCauOMAAAAJ&view_op=list_works&sortby=pubdate}{\textbf{Click here for Google scholar}}\\     
-%    \end{itemize}}
-%        }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 %----------------------------------------------------------------------------------------
 %	 bibliography 
 %----------------------------------------------------------------------------------------
 
-
-
-
-
-
-\begin{textblock}{18}(2, 15)
+\begin{downPubli}
 
 \section{Publications}
 
@@ -320,7 +315,7 @@ Spanish electrical engineer     Hands-on experience on a wide spectrum of the R\
 \begin{flushright}
 \textit{* unpublished}
 \end{flushright}
-\end{textblock}
+\end{downPubli}
 
 
 \end{document} 
