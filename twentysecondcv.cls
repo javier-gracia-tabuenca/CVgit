@@ -172,7 +172,7 @@
 %----------------------------------------------------------------------------------------
 \newenvironment{RigthPage1}{
 	%text
-  	\begin{textblock}{13.5}(7.6,2)
+  	\begin{textblock}{12.7}(7.6,2)
 	}{
 	 \end{textblock}
 	}
@@ -197,7 +197,7 @@
 %----------------------------------------------------------------------------------------
 \newenvironment{RigthPage2}{
 	%text
-  	\begin{textblock}{13}(7.6,1)
+  	\begin{textblock}{12.7}(7.6,1)
 	}{
 	 \end{textblock}
 	}
@@ -239,12 +239,9 @@
 
 %CONTACT ELEMENTS 
 \newcommand{\cvlink}[3]{             
-              \hrefO{#2}{\includegraphics[width=0.6cm]{#3}}              
-             & \href{#2}{#1}\\ }
-
-\newcommand{\cvlinkdos}[3]{             
-              \hrefO{#2}{\includegraphics[width=0.6cm]{#3}}              
-              \href{#2}{#1}\\ }
+             $\vcenter{\hbox{ \hrefO{#2}{\includegraphics[width=0.6cm]{#3}} }}$
+             \href{#2}{#1}
+              }
    
 %BUBBLE KNOWLEDGE
 % Command for printing skill progress bars
