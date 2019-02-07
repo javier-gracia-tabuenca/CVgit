@@ -143,14 +143,17 @@
 %----------------------------------------------------------------------------------------
 \newcommand{\lmarging}{0.7}
 \newcommand{\umarging}{0.7}
-\newcommand{\makeprofileTitle}[1]{
+\newcommand{\makeprofileTitle}[2]{
 	%background
   \begin{tikzpicture}[remember picture,overlay]
-      \node [rectangle, fill=sidecolor, anchor=north, minimum width=\paperwidth, minimum height=2.2cm] (box) at (3cm,0.5cm){};
+      \node [rectangle, fill=sidecolor, anchor=north, minimum width=\paperwidth, minimum height=2.8cm] (box) at (3cm,0.5cm){};
   \end{tikzpicture}
     %text   
     \begin{textblock}{21}(\lmarging, \umarging)
   	{\Huge\color{pblue}#1}
+  	\\ 
+  	\\
+  	{\Large\color{black!80}#2}
     \end{textblock}
 }
 
@@ -163,7 +166,7 @@
       \node [rectangle, fill=sidecolor, anchor=north, minimum width=9.3cm, minimum height=					\paperheight+1cm] (box) at (-5cm,0.5cm){};
   	\end{tikzpicture}
 	%text
-  	\begin{textblock}{6.3}(\lmarging,2)
+  	\begin{textblock}{6.3}(\lmarging,3)
 	}{
 	 \end{textblock}
 	}
@@ -172,7 +175,7 @@
 %----------------------------------------------------------------------------------------
 \newenvironment{RigthPage1}{
 	%text
-  	\begin{textblock}{12.7}(7.6,2)
+  	\begin{textblock}{12.7}(7.6,2.8)
 	}{
 	 \end{textblock}
 	}
