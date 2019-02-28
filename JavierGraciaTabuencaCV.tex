@@ -54,7 +54,7 @@ isbn=false,date=year,block=space]{biblatex}
 %	 TITLE
 %----------------------------------------------------------------------------------------
 \makeprofileTitle{Javier Gracia-Tabuenca}
-{Biomedical R\&D signal-processing and HW}
+{Biomedical R\&D HW and signal-processing}
 
 %----------------------------------------------------------------------------------------
 %	 Left page 1
@@ -92,9 +92,9 @@ isbn=false,date=year,block=space]{biblatex}
 \vspace{\spaceitems}
 \profilesection{Programming}{2.2cm} 
         
+\lanprog{Python}{$>$1y}{ Scikit-learn, NumPy, Pandas}  
 \lanprog{Matlab}{+6y}{Signal processing, chaos analysis} 
-\lanprog{R}{+2y}{Statistical analysis}  
-\lanprog{Phython}{$>$1y}{ Scikit-learn, NumPy, Pandas}      
+\lanprog{R}{+2y}{Statistical analysis}      
 \lanprog{C}{+2y}{MSP430, ESP8266, Arduino}
 \lanprog{LabView}{+2y}{USB-6259, PID, +Matlab}
 \lanprog{Altium}{+2y}{PCB, also Eagle}
@@ -109,8 +109,8 @@ isbn=false,date=year,block=space]{biblatex}
 \begin{RigthPage1}
 %----------------------------------------------------------------------------------------
 %	 Profile
-\section{Profile}  
-PhD Biomedical Engineering on advance signal processing methods and statistical analysis of short-term and overnight respiratory signals. Expanding my knowledge on machine learning. +5 years university lecturer. Espanjalainen seitsemän vuotta Suomessa.  
+\section{Profile} 
+Hands-on experience on a wide spectrum of the R\&D cycle of medical devices. Ranging from hardware design to patient testing, including embedded SW coding and advance signal processing methods. Currently expanding my knowledge on machine learning. +5 years university lecturer. Espanjalainen seitsemän vuotta Suomessa.  
 \\
 %----------------------------------------------------------------------------------------
 %	 WORK
@@ -129,8 +129,8 @@ PhD Biomedical Engineering on advance signal processing methods and statistical 
         {Researcher PhD.}
         {\href{https://www.tut.fi/}{\textbf{Tampere University of Technology}}}
         {
-          \item Cardiorespiratory Signal-processing 
           \item Hardware design.
+          \item Cardiorespiratory Signal-processing 
           \item See projects section below.
         }
         
@@ -150,7 +150,7 @@ PhD Biomedical Engineering on advance signal processing methods and statistical 
         {Researcher}
         {\href{https://www.tut.fi/}{\textbf{Tampere University of Technology}}}
         {
-        \item Testing wearable's firmware, now knows as \href{https://www.ventica.net/}{Ventica®}.   }
+        \item Embedded coding a wearable, now knows as \href{https://www.ventica.net/}{Ventica®}.   }
 
 	\twentyitemlist
     	{2011 - 2012}
@@ -165,19 +165,29 @@ PhD Biomedical Engineering on advance signal processing methods and statistical 
 %	 Proyects 
 \section{Projects}
 \begin{twenty} % Environment for a list with descriptions
-	\twentyitemlist
+  \twentyitemlist
+    	{2013 - 2016}
+        {Combined impulse oscillometry-impedance pneumography~\cite{iosj,multi}}
+        {}
+        {
+        %I designed, building, and calibrated the electronics, mechanics, and signal processing. I designed and carried a test in healthy volunteers.
+        \item Use 3D and laser cuter to create the mechanical parts. 
+        \item Design PCB and program the electronics.
+        \item Crete custom calibration and testing methods.
+        \item Conduct test in healthy volunteers
+        }
+
+       	\twentyitemlist
     	{2017 - 2019}
         {Asthma assessed from nocturnal tidal breathing in children~\cite{children,infants}}
         {\\Collaboration: Helsinki university hospital, Tampere university hospital }
         {        
-        \item Respiratory flow and ECG feature extraction.
-        \item Sleep phase detection.
-        \item Statistical analysis.
-        \item Non-linear analysis: DFA, SamEn, noise-limit...
+        \item Code respiratory flow and ECG feature extraction.
+        \item Code sleep phase detection.
+        \item Code non-linear analysis: DFA, SamEn, noise-limit...
         %Algorithms defining sleep phase, algorithms measuring breath-to-breath parameters, signal processing, statistical analysis, hardware testing, manuscript writing.
         %I designed algorithms defining sleep phases and measuring breath parameters. I carry statistical analysis to find the best parameters and sleep time to monitor asthma. I run the code in a AWS-like sys.
         }
-        
 
 	\twentyitemlist
     	{2016 - 2017}
@@ -185,21 +195,13 @@ PhD Biomedical Engineering on advance signal processing methods and statistical 
         {\\Collaboration: Tampere university hospital }
         {
         \item Algorithm based on chaos analysis for noise reduction. 
-        \item Test performance on respiratory flow.
+        %\item Test performance on respiratory flow.
 		%This noise reduction method, borrowed from chaos analysis, has a great potential for biosignals. I demonstrated so for respiratory flow. 
 		}
        
+   
   
-  \twentyitemlist
-    	{2013 - 2016}
-        {Combined impulse oscillometry-impedance pneumography~\cite{iosj,multi}}
-        {}
-        {
-        %I designed, building, and calibrated the electronics, mechanics, and signal processing. I designed and carried a test in healthy volunteers.
-        \item Design hardware. 
-        \item Develop signal processing
-        \item Conduct test in healthy volunteers
-        }       
+       
 \end{twenty} 
 %----------------------------------------------------------------------------------------
 %	 Foot
@@ -221,22 +223,24 @@ PhD Biomedical Engineering on advance signal processing methods and statistical 
 \begin{LeftPage2} % Print the sidebar
 %Languages         
 \profilesection{Languages}{3cm} 
-              
+\begin{center}            
 \includegraphics[width=1.2cm]{img/esp.png}~
 \includegraphics[width=1.4cm]{img/eng.png}~
 \includegraphics[width=1.2cm]{img/cat.png}~
 \includegraphics[width=1.2cm]{img/fin.png} 
+\end{center}
 
 %----------Library-------------------------------------- 
 %Languages         
 \profilesection{Library}{4cm} 
-\newcommand{\sizebook}{2.3cm}              
-\input{library.tex}     
-      
+\newcommand{\sizebook}{2.2cm}              
+\input{library.tex} 
+    
+\begin{center}      
 \nonlinear ~\handsonml~\story
 
 \wealth~\dictator~\bitcoin             
-
+\end{center}
 
   
 %----------Interest-------------------------------------- 
@@ -260,7 +264,7 @@ PhD Biomedical Engineering on advance signal processing methods and statistical 
 
 \begin{twenty} % Environment for a list with descriptions
 \twentyitemlist
-    	{2019 (pending)}
+    	{2019 \\ (75\% done)}
         {Coursera: Machine Learning}
         {\href{https://www.coursera.org/learn/machine-learning}{\textbf{MOOC Stanford}}}
         {

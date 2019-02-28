@@ -360,7 +360,7 @@
     % define the list of colors usable in the diagram
     set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
     % sets the opacity at which the bubbles are shown
-    bubble fill opacity = 0.6,
+    bubble fill opacity = 1,
     % sets the opacity at which the bubble text is shown
     bubble text opacity = 1,
 }
